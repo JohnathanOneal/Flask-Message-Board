@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h2>{% block title %}Home{% endblock title %}</h2>
+{% enblock header %}
+
+{% block content %}
+    <p>
+        Learn more about the all-knowing forum by visiting the <a href="{{ url_for('pages.about') }}">About Page</a>
+    </p>
+{% endblock content %}
