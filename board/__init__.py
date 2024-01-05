@@ -7,12 +7,13 @@
 from flask import Flask
 
 # pages is where we create our blueprint and defined the two routes
-from board import pages
+from board import pages, posts
 
 
 def create_app():
     app = Flask(__name__)
 
     app.register_blueprint(pages.bp)
+    app.register_blueprint(posts.bp)
 
     return app
