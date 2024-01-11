@@ -2,3 +2,4 @@ flask_tutorial/
 .idea/
 __pycache__/
 .env
+/board.sqlite
