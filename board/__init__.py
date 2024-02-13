@@ -25,6 +25,15 @@ def create_app():
     app.register_blueprint(pages.bp)
     app.register_blueprint(posts.bp)
 
-    print(os.getenv('ENVIRONMENT'))
-    print(app.config.get('DATABASE'))
     return app
+
+if __name__ == "__main__":
+    app = create_app()
+
+    # Get the host and port from environment variables or use default values
+    host = os.getenv('FLASK_HOST', '0.0.0.0')
+    port = int(os.getenv('FLASK_PORT', 5000))
+
+    # Run the app with the specified host and port
+    app.run(host=host, port=port)
+    
